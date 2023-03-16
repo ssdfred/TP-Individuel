@@ -1,0 +1,13 @@
+/*l'import de nos variable */
+@import "./variable.scss";
+/*import des styles bootstrap*/
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+
+
+
+
+nav {
+  background-color: $primary;
+}
+
