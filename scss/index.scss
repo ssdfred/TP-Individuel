@@ -1,16 +1,7 @@
 /*l'import de nos variable */
-
+@import "./custom.scss";
 @import "./variable.scss";
 /*import des styles bootstrap*/
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
-
-
-
-
-
-nav {
-  background-color: $primary;
-}
-
