@@ -12,7 +12,6 @@ async function getDataFromTMDB() {
     .then((response) => response.json())
     .catch((err) => console.error(err));
 }
-
 /**
  * fonction qui ajoute les éléments recupéres depuis la fonction précédente au HTML
  * @param {*promise} listLastMovies
@@ -34,10 +33,8 @@ function createHtmlElement(listLastMovies, listOfResults) {
     listOfResults.appendChild(htmlElement);
   });
 }
-
 // Pour la taille de l'image , mettre une max-width a 57% = 114px
 const listOfResults = document.getElementById("listLastRelease");
-
 document.body.onload = async (e) => {
   let listLastMovies = await getDataFromTMDB();
   if (listLastMovies) {
