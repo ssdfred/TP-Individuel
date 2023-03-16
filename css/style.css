@@ -1,8 +1,4 @@
 
-.nav-link:hover {
-  color: red;
-}
-#Logo {
-  width: 150px;
-  height: 120px;
+nav {
+  background-color: #9368b7;
 }
