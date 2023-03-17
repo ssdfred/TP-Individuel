@@ -15,22 +15,3 @@
   
 }
 
-$breakpoints: (
-   mobile: 599px
-);
-
-@mixin mobile-only {
-   @media screen and (max-width: map-get($breakpoints, mobile)){
-    grid-template-columns: 1fr;
-    }
-  }
-
-  .top-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    }
-    @media screen and (max-width: 599px) {
-    .top-container {
-     grid-template-columns: 1fr;
-    }
-    }
