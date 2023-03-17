@@ -1,36 +1,24 @@
+@import "./variable.scss" ;
 #container {
   display: block;
   width: 100%;
   max-width: 100%;
   margin-top: 20px;
   padding: 0px 20px;
-  border: 1px solid red;
+}
+.top-container img {
+  height: auto;
+  max-width: 100%;
+  border-radius: 3px;
+  justify-content: center;
+
 }
 
-#tops {
-  border: 1px solid green;
-  display: block;
-  width: auto;
-  flex-wrap: wrap;
-  
+.top-container h4{
+  font-size: 18px;
+  margin-top: 10px;
 }
 
-$breakpoints: (
-   mobile: 599px
-);
-
-@mixin mobile-only {
-   @media screen and (max-width: map-get($breakpoints, mobile)){
-    grid-template-columns: 1fr;
-    }
-  }
-
-  .top-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    }
-    @media screen and (max-width: 599px) {
-    .top-container {
-     grid-template-columns: 1fr;
-    }
-    }
+.top-container p{
+  font-size: 12px;
+}
