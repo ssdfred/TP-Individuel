@@ -14,4 +14,15 @@
   flex-wrap: wrap;
 }
 
+.top-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media screen and (max-width: 599px) {
+  .top-container {
+    grid-template-columns: 1fr;
+  }
+}
+
 /*# sourceMappingURL=series.css.map */
