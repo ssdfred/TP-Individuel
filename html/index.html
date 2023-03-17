@@ -2,134 +2,103 @@
 
 <html lang="fr">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="../node_modules/bootstrap/js/index.esm.js" />
-    <link rel="stylesheet" href="../css/index.css" />
-    <title>SensCritos</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="../node_modules/bootstrap/js/index.esm.js" />
+  <link rel="stylesheet" href="../css/index.css" />
+  <title>SensCritos</title>
+</head>
 
-  <body>
-    <header>
-      <div class="container  border">
-        <div class="row">
-          <img
-            class="col"
-            src="../assets/images/logo_sens_critos.png"
-            alt="SensCritos"
-            id="Logo"
-          />
-          <a class="col text-decoration-none" href="/#" aria-label="SensCritos"
-            ><h1>SensCritos</h1></a
-          >
-          <form class="border col" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Recherche"
-            />
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
+<body>
+  <header>
+    <div class="container  border">
+      <div class="row">
+        <img class="col" src="../assets/images/logo_sens_critos.png" alt="SensCritos" id="Logo" />
+        <a class="col text-decoration-none" href="/#" aria-label="SensCritos">
+          <h1>SensCritos</h1>
+        </a>
+        <form class="border col" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Recherche" />
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-lg">
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header col-3">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+            Navigation
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body m-2">
+          <ul class="navbar-nav mt-3 border">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#" aria-label="Actualité">Actualité</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" aria-label="Films">Films</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" aria-label="Séries">Séries</a>
+            </li>
+          </ul>
         </div>
       </div>
-      <nav class="navbar navbar-expand-lg">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="offcanvas offcanvas-start"
-          tabindex="-1"
-          id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel"
-        >
-          <div class="offcanvas-header col-3">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-              Navigation
-            </h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="offcanvas-body m-2">
-            <ul class="navbar-nav mt-3 border">
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  aria-current="page"
-                  href="#"
-                  aria-label="Actualité"
-                  >Actualité</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#" aria-label="Films">Films</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#" aria-label="Séries">Séries</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
+    </nav>
+  </header>
 
 
 
-    <main>
-      <h2>Actualités</h2>
+  <main>
+    <h2>Actualités</h2>
 
-      <h3>Dernière sorties</h3>
+    <h3>Dernière sorties</h3>
 
-      <section
-        id="listLastRelease"
-        class="d-flex justify-content-evenly flex-wrap"
-      ></section>
-      <section>
-        <h3>Dernière sorties sur Amazon Prime</h3>
-        <p>Appel a l'api Amazon Prime</p>
-        <h3>Dernière sorties sur Disney +</h3>
-        <p>Appel a l'api Disney +</p>
-        <h3>Dernière sorties au Ciné</h3>
-        <p>Appel a l'api Allociné</p>
-      </section>
-    </main>
+    <section id="listLastRelease" class="d-flex justify-content-between flex-wrap"></section>
+    <section>
+      <h3>Dernière sorties sur Amazon Prime</h3>
+      <p>Appel a l'api Amazon Prime</p>
+      <h3>Dernière sorties sur Disney +</h3>
+      <p>Appel a l'api Disney +</p>
+      <h3>Dernière sorties au Ciné</h3>
+      <p>Appel a l'api Allociné</p>
+    </section>
+  </main>
 
-    <footer>
-      <section>
-        <div>
-          <h2>Actulité</h2>
-        </div>
-        <div>
-          <h2>Films</h2>
-        </div>
-        <div>
-          <h2>Séries</h2>
-        </div>
-      </section>
-      <section>
-        <a>Contact</a>
-        <a>A propos</a>
-        <a>Aide</a>
-        <a>CGU</a>
-        <a>Blog</a>
-        <a>Emploi</a>
-      </section>
-      <div><p>2023 SensCritos</p></div>
-    </footer>
+  <footer>
+    <section>
+      <div>
+        <h2>Actulité</h2>
+      </div>
+      <div>
+        <h2>Films</h2>
+      </div>
+      <div>
+        <h2>Séries</h2>
+      </div>
+    </section>
+    <section>
+      <a>Contact</a>
+      <a>A propos</a>
+      <a>Aide</a>
+      <a>CGU</a>
+      <a>Blog</a>
+      <a>Emploi</a>
+    </section>
+    <div>
+      <p>2023 SensCritos</p>
+    </div>
+  </footer>
 
-    <script src="../js/index.js" type="module"></script>
-    <script src="../node_modules/@popperjs/core/dist/umd/popper.min.js" type="module"></script>
-  </body>
+  <script src="../js/index.js" type="module"></script>
+  <script src="../node_modules/@popperjs/core/dist/umd/popper.min.js" type="module"></script>
+</body>
+
 </html>
