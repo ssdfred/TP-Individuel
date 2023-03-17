@@ -20,10 +20,52 @@ main {
   }
 }
 
-#logo {
-  height: 20px;
-  width: 15px;
+
+  body {
+    background-color: $background;
+  }
+
+  nav {
+    background-color: $primary;
+  }
+
+  h2,
+  h3 {
+    color: $text;
+  }
+  li > a:hover {
+    transition-duration: 1s;
+    background-color: $secondary;
+    color: $background;
+  }
+
+.dark {
+  nav {
+    background-color: $tertiary;
+  }
+  h2,
+  h3 {
+    color: $background;
+  }
+  li > a:hover {
+    transition-duration: 1s;
+    background-color: $primary;
+    color: $background;
+  }
+  article >* {
+    color: $background;
+  }
+body {
+    background-color: $text;
+  }
 }
+
+
+#Logo {
+  width: 150px !important;
+  height: 150px !important;
+}
+
 nav {
   background-color: $primary;
 }
@@ -50,3 +92,4 @@ nav {
   }
 
 }
+
