@@ -1,3 +1,24 @@
+h1,h2,h3,h4 {
+  font-family: 'Almendra SC';
+}
+main {
+  h2 {
+    color : $secondary !important;
+    font-weight: 900 !important;
+    font-size: 2.4rem !important;
+    font-style: italic;
+    margin-left: 5%;  
+  }
+  h3 {
+    color : $text;
+    font-weight: 900 !important;
+    font-size: 2rem !important;
+    font-style: italic;
+    margin-left: 5%;
+    width:fit-content;
+    border-bottom: 3px solid $text;
+  }
+}
 
 #logo {
   height: 20px;
@@ -5,4 +26,26 @@
 }
 nav {
   background-color: $primary;
+}
+.articles{
+  width: 250px;
+  margin-top : 3%;
+  h4{
+    margin-left: 15%;
+    color : $tertiary;
+    font-weight: bold;
+    text-align: center  ;
+  }
+  p {
+    text-align: justify;
+    margin-left: 25%;
+  }
+  img{
+    margin-left: 25%;
+  }
+  button{
+    margin-left: 35%;
+    border : 2px solid $text;
+  }
+
 }
