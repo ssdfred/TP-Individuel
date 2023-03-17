@@ -7,16 +7,17 @@ const createSeries = async () => {
             const series = await getSeries.json()
             console.log(series)
             console.log(series.shows)
-            let top = [{ name: "", notes: 0 }, { name: "", notes: 0 }, { name: "", notes: 0 }, { name: "", notes: 0 }, { name: "", notes: 0 }, { name: "", notes: 0 }, { name: "", notes: 0 }, { name: "", notes: 0 }, { name: "", notes: 0 }, { name: "", notes: 0 }]
+            let top = [{ name: "", notes: 0, ratio: 0 }, { name: "", notes: 0, ratio: 0 }, { name: "", notes: 0, ratio: 0 }, { name: "", notes: 0, ratio: 0 }, { name: "", notes: 0, ratio: 0 }, { name: "", notes: 0, ratio: 0 }, { name: "", notes: 0, ratio: 0 }, { name: "", notes: 0, ratio: 0 }, { name: "", notes: 0, ratio: 0 }, { name: "", notes: 0, ratio: 0 }]
 
             series.shows.forEach(element => {
-                if (element.seasons !== "0") {
+                if (element.seasons !== "0" && element.creation === "2022") {
                     let i = 0
 
                     while (i < top.length) {
-                        if (element.notes.mean > top[i].notes) {
+                        if (element.notes.mean * element.notes.total > top[i].ratio) {
                             top[i].notes = element.notes.mean
                             top[i].name = element.title
+                            top[i].ratio = element.notes.mean * element.notes.total
                             break
                         }
                         i++
