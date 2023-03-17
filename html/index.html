@@ -5,32 +5,34 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/index.css" />
     <link href="../node_modules/bootstrap/js/index.esm.js" />
+    <link rel="stylesheet" href="../css/index.css" />
     <title>SensCritos</title>
   </head>
 
   <body>
     <header>
-      <div class="d-flex g-lg-1 justify-content-between border">
-        <img
-          class="mt-lg-1"
-          src="../assets/images/logo_sens_critos.png"
-          alt="SensCritos"
-          id="Logo"
-        />
-        <a class="text-decoration-none" href="/#" aria-label="SensCritos"
-          ><h1>SensCritos</h1></a
-        >
-        <form class="col-3 mt-lg-5" role="search">
-          <input
-            class="form-control me-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
+      <div class="container  border">
+        <div class="row">
+          <img
+            class="col"
+            src="../assets/images/logo_sens_critos.png"
+            alt="SensCritos"
+            id="Logo"
           />
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+          <a class="col text-decoration-none" href="/#" aria-label="SensCritos"
+            ><h1>SensCritos</h1></a
+          >
+          <form class="border col" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Recherche"
+            />
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
       </div>
       <nav class="navbar navbar-expand-lg">
         <button
@@ -43,7 +45,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div
-          class="offcanvas offcanvas-top"
+          class="offcanvas offcanvas-start"
           tabindex="-1"
           id="offcanvasNavbar"
           aria-labelledby="offcanvasNavbarLabel"
@@ -60,7 +62,7 @@
             ></button>
           </div>
           <div class="offcanvas-body m-2">
-            <ul class="navbar-nav justify-content-between col-9 mt-3 border">
+            <ul class="navbar-nav mt-3 border">
               <li class="nav-item">
                 <a
                   class="nav-link"
@@ -125,5 +127,6 @@
     </footer>
 
     <script src="../js/index.js" type="module"></script>
+    <script src="../node_modules/@popperjs/core/dist/umd/popper.min.js" type="module"></script>
   </body>
 </html>

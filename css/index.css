@@ -1,5 +1,14 @@
 @charset "UTF-8";
 /*l'import de nos variable */
+#logo {
+  height: 20px;
+  width: 15px;
+}
+
+nav {
+  background-color: #9368b7;
+}
+
 /*import des styles bootstrap*/
 /*!
  * Bootstrap  v5.3.0-alpha1 (https://getbootstrap.com/)
@@ -11609,9 +11618,6 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
-}
-nav {
-  background-color: #9368b7;
 }
 
 /*# sourceMappingURL=index.css.map */
