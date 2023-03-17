@@ -50,6 +50,7 @@ nav {
 .articles button {
   margin-left: 35%;
   border: 2px solid #070600;
+  color: #F7F7FF;
 }
 
 /*import des styles bootstrap*/
