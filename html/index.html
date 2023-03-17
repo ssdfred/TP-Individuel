@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="fr">
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -94,63 +95,44 @@
     <main>
       <h2>Actualités</h2>
 
-      <h3>Dernière sorties</h3>
 
-      <section
-        id="listLastRelease"
-        class="d-flex justify-content-evenly flex-wrap"
-      ></section>
-      <section>
-        <h3>Dernière sorties sur Amazon Prime</h3>
-        <p>Appel a l'api Amazon Prime</p>
-        <h3>Dernière sorties sur Disney +</h3>
-        <p>Appel a l'api Disney +</p>
-        <h3>Dernière sorties au Ciné</h3>
-        <p>Appel a l'api Allociné</p>
-      </section>
-    </main>
+  <main>
+    <h2>Actualités</h2>
+    <h3>Dernière sorties de films</h3>
+    <section id="filmsLastRelease" class="d-flex justify-content-between flex-wrap"></section>
+    <h3>Dernière sorties de séries</h3>
+    <section id="seriesLastRelease" class="d-flex justify-content-between flex-wrap"></section>
+  </main>
 
-    <footer>
-      <section>
-        <div>
-          <h2>Actulité</h2>
-        </div>
-        <div>
-          <h2>Films</h2>
-        </div>
-        <div>
-          <h2>Séries</h2>
-        </div>
-      </section>
-      <section>
-        <a>Contact</a>
-        <a>A propos</a>
-        <a>Aide</a>
-        <a>CGU</a>
-        <a>Blog</a>
-        <a>Emploi</a>
-      </section>
-      <div><p>2023 SensCritos</p></div>
-    </footer>
-    <script
-      async
-      src="https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js"
-      crossorigin="anonymous"
-    ></script>
-    <script type="importmap">
-      {
-        "imports": {
-          "@popperjs/core": "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js",
-          "bootstrap": "https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.esm.min.js"
-        }
-      }
-    </script>
-    <script type="module">
-      import * as bootstrap from "bootstrap";
+  <footer>
+    <section>
+      <div>
+        <h2>Actulité</h2>
+      </div>
+      <div>
+        <h2>Films</h2>
+      </div>
+      <div>
+        <h2>Séries</h2>
+      </div>
+    </section>
+    <section>
+      <a>Contact</a>
+      <a>A propos</a>
+      <a>Aide</a>
+      <a>CGU</a>
+      <a>Blog</a>
+      <a>Emploi</a>
+    </section>
+    <div>
+      <p>2023 SensCritos</p>
+    </div>
+  </footer>
 
-      new bootstrap.Popover(document.getElementById("popoverButton"));
-    </script>
-    <script src="../js/ModeSombre.js"></script>
-    <script src="../js/index.js" type="module"></script>
-  </body>
+
+  <script src="../js/index.js" type="module"></script>
+  <script src="../node_modules/@popperjs/core/dist/umd/popper.min.js" type="module"></script>
+</body>
+
 </html>
+
