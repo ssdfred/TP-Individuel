@@ -1,40 +1,46 @@
 
-Body {
-  background-color: $background;
+
+  body {
+    background-color: $background;
+  }
+
+  nav {
+    background-color: $primary;
+  }
+
+  h2,
+  h3 {
+    color: $text;
+  }
+  li > a:hover {
+    transition-duration: 1s;
+    background-color: $secondary;
+    color: $background;
+  }
+
+.dark {
+  nav {
+    background-color: $tertiary;
+  }
+  h2,
+  h3 {
+    color: $background;
+  }
+  li > a:hover {
+    transition-duration: 1s;
+    background-color: $primary;
+    color: $background;
+  }
+  article >* {
+    color: $background;
+  }
+body {
+    background-color: $text;
+  }
 }
+
 
 #Logo {
   width: 150px !important;
-  height: 100px !important;
-}
-
-nav {
-  background-color: $primary;
-}
-li > a {
-  color: $text;
-}
-li >a:hover {
-  transition-duration: 1s;
-background-color: $tertiary;
-color: $background;
-}
-
-.dark button {
-  Body {
-    background-color: $text;
-  }
-
-  
-  nav {
-    background-color: $tertiary;
-    }
-  li > a {
-    color: $text;
-  }
-  li >a:hover {
-    transition-duration: 1s;
-  background-color: $tertiary;
-  color: $background;
-  }
+  height: 150px !important;
 }
