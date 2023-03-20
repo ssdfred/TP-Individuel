@@ -40,7 +40,7 @@ function createHtmlElement(array, parent) {
     <img src="${element.image}" alt="Poster de ${element.title}" width=200px height=300px >
     <p><span class="fw-bold">Note : </span>${element.note}/10</p>
     <p class="visually-hidden" id="description${element.id}"><span class="fw-bold">Description : </span>${element.description}</p>
-    <button class="btn btn-primary" id="button${element.id}">Voir la description</button>  
+    <button class="btn" id="button${element.id}">Voir la description</button>  
   `;
     parent.appendChild(htmlElement);
     const button = document.getElementById("button" + element.id);
