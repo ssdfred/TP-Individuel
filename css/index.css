@@ -22,104 +22,6 @@
   }
 }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
-  font-family: "Almendra SC";
-}
-
-main h2, main .h2 {
-  color: #74b336 !important;
-  font-weight: 900 !important;
-  font-size: 2.4rem !important;
-  font-style: italic;
-  margin-left: 5%;
-}
-main h3, main .h3 {
-  color: #070600;
-  font-weight: 900 !important;
-  font-size: 2rem !important;
-  font-style: italic;
-  margin-left: 5%;
-  width: fit-content;
-  border-bottom: 3px solid #070600;
-}
-
-body {
-  background-color: #f7f7ff;
-}
-
-nav {
-  background-color: #9368b7;
-}
-
-h2, .h2,
-h3,
-.h3 {
-  color: #070600;
-}
-
-li > a:hover {
-  transition-duration: 1s;
-  background-color: #74b336;
-  color: #f7f7ff;
-}
-
-.dark nav {
-  background-color: #68abab;
-}
-.dark h2, .dark .h2,
-.dark h3,
-.dark .h3 {
-  color: #f7f7ff;
-}
-.dark li > a:hover {
-  transition-duration: 1s;
-  background-color: #9368b7;
-  color: #f7f7ff;
-}
-.dark article > * {
-  color: #f7f7ff;
-}
-.dark body {
-  background-color: #070600;
-}
-
-#Logo {
-  width: 150px !important;
-  height: 150px !important;
-}
-
-nav {
-  background-color: #9368b7;
-}
-
-.articles {
-  width: 250px;
-  margin-top: 3%;
-}
-.articles h4, .articles .h4 {
-  margin-left: 15%;
-  color: #68abab;
-  font-weight: bold;
-  text-align: center;
-}
-.articles p {
-  text-align: justify;
-  margin-left: 25%;
-}
-.articles img {
-  margin-left: 25%;
-}
-.articles button {
-  margin-left: 35%;
-  border: 2px solid #070600;
-  color: #f7f7ff;
-}
-.articles .titreTronque {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  height: 55px;
-}
-
 /*import des styles bootstrap*/
 /*!
  * Bootstrap  v5.3.0-alpha1 (https://getbootstrap.com/)
@@ -23338,6 +23240,126 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
+h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+  font-family: "Almendra SC";
+}
+
+main h2, main .h2 {
+  font-weight: 900 !important;
+  font-size: 2.4rem !important;
+  font-style: italic;
+  margin-left: 5%;
+}
+main h3, main .h3 {
+  font-weight: 900 !important;
+  font-size: 2rem !important;
+  font-style: italic;
+  margin-left: 5%;
+  width: fit-content;
+  border-bottom: 3px solid #070600;
+}
+
+body {
+  background-color: #f7f7ff;
+}
+
+nav {
+  font-family: "Almendra SC";
+  background-color: #9368b7;
+}
+
+h2, .h2,
+h3,
+.h3 {
+  font-family: "Almendra SC";
+  color: #070600;
+}
+
+li > a:hover {
+  transition-duration: 1s;
+  background-color: #74b336;
+  color: #f7f7ff;
+}
+
+.dark {
+  background-color: #070600;
+}
+.dark nav {
+  background-color: #68abab;
+}
+.dark h2, .dark .h2,
+.dark h3,
+.dark .h3 {
+  color: #f7f7ff;
+}
+.dark li > a:hover {
+  transition-duration: 1s;
+  background-color: #9368b7;
+  color: #f7f7ff;
+}
+.dark article > * {
+  color: #f7f7ff;
+}
+.dark h4, .dark .h4, .dark p {
+  color: #f7f7ff;
+}
+.dark .articles {
+  width: 250px;
+  margin-top: 3%;
+}
+.dark .articles h4, .dark .articles .h4 {
+  margin-left: 15%;
+  color: #74b336;
+  font-weight: bold;
+  text-align: center;
+}
+.dark .articles p {
+  text-align: justify;
+  margin-left: 25%;
+}
+.dark .articles img {
+  margin-left: 25%;
+}
+.dark .articles button {
+  margin-left: 35%;
+  border: 2px solid #f7f7ff;
+  color: #f7f7ff;
+  background-color: #68abab;
+}
+
+#Logo {
+  width: 150px !important;
+  height: 150px !important;
+}
+
+.articles {
+  width: 250px;
+  margin-top: 3%;
+}
+.articles h4, .articles .h4 {
+  margin-left: 15%;
+  color: #9368b7;
+  font-weight: bold;
+  text-align: center;
+}
+.articles p {
+  text-align: justify;
+  margin-left: 25%;
+}
+.articles img {
+  margin-left: 25%;
+}
+.articles button {
+  margin-left: 35%;
+  border: 2px solid #070600;
+  color: #68abab;
+  background-color: #9368b7;
+}
+.articles .titreTronque {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 55px;
 }
 
 /*# sourceMappingURL=index.css.map */
