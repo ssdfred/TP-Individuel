@@ -19,7 +19,7 @@ button.addEventListener('click', () => {
     modeSombre();
   }
   
-})
+});
 
 function modeSombre() {
   document.body.className = 'dark';
