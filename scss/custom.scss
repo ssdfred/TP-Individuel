@@ -1,112 +1,145 @@
-h1,h2,h3,h4 {
-  font-family: 'Almendra SC';
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Almendra SC";
+  color: $text;
+}
+.nav-link {
+  font-family: "Almendra SC";
+  font-size: 1.4rem;
+  color: $text;
+}
+.nav-link {
+  @include lg {
+    color: $background;
+    margin-left: 8rem;
+    margin-right: 8rem;
+    font-size: 1.7rem;
+  }
+}
+
+.btn,
+span {
+  font-family: "Almendra SC";
 }
 main {
   h2 {
+    color: $secondary;
     font-weight: 900 !important;
     font-size: 2.4rem !important;
     font-style: italic;
-    margin-left: 5%;  
+    margin-left: 5%;
   }
   h3 {
     font-weight: 900 !important;
     font-size: 2rem !important;
     font-style: italic;
     margin-left: 5%;
-    width:fit-content;
+    width: fit-content;
     border-bottom: 3px solid $text;
+  }
+  .btn:hover {
+    background-color: $tertiary;
   }
 }
 body {
-    background-color: $background;
-  }
-  nav {
-    font-family: 'Almendra SC';
-    background-color: $primary;
-  }
-  h2,
-  h3 {
-    font-family: 'Almendra SC';
-    color: $text;
-  }
-  li > a:hover {
-    transition-duration: 1s;
-    background-color: $secondary;
-    color: $background;
-  }
-.dark {
-    background-color: $text;
-  nav {
-    background-color: $tertiary;
-  }
-  h2,
-  h3 {
-    color: $background;
-  }
-  li > a:hover {
-    transition-duration: 1s;
-    background-color: $primary;
-    color: $background;
-  }
-  article >* {
-    color: $background;
-  }
-  h4, p {
-    color: $background;
-  }
-  .articles{
-    width: 250px;
-    margin-top : 3%;
-    h4{
-      margin-left: 15%;
-      color: $secondary;
-      font-weight: bold;
-      text-align: center  ;
-    }
-    p {
-    text-align: justify;
-      margin-left: 25%;
-    }
-    img{
-      margin-left: 25%;
-    }
-    button{
-      margin-left: 35%;
-      border : 2px solid $background;
-      color: $background;
-      background-color: $tertiary;
-    }
-  }
+  background-color: $background;
+}
+nav {
+  background-color: $primary;
+}
+
+li > a:hover {
+  transition-duration: 1s;
+  background-color: $tertiary;
+  color: $background;
 }
 #Logo {
   width: 150px !important;
   height: 150px !important;
 }
-.articles{
+.articles {
   width: 250px;
-  margin-top : 3%;
-  h4{
+  margin-top: 3%;
+  h4 {
     margin-left: 15%;
-    color : $primary;
+    color: $tertiary;
     font-weight: bold;
-    text-align: center  ;
+    text-align: center;
   }
   p {
     text-align: justify;
     margin-left: 25%;
   }
-  img{
+  img {
     margin-left: 25%;
   }
-  button{
+  button {
     margin-left: 35%;
-    border : 2px solid $text;
-    color: $tertiary;
+    border: 2px solid $text;
+    color: $background;
     background-color: $primary;
   }
   .titreTronque {
-    overflow:hidden;
-    text-overflow:ellipsis;
-    height: 55px;    
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 55px;
+  }
+}
+.dark {
+  background-color: $text;
+  nav {
+    background-color: $tertiary;
+    font-family: "Almendra SC";
+  }
+  h2,
+  h3 {
+    color: $background;
+  }
+  li > a:hover {
+    transition-duration: 1s;
+    background-color: $primary;
+    color: $background;
+  }
+  article > * {
+    color: $background;
+  }
+  h4,
+  p {
+    color: $background;
+  }
+  .articles {
+    width: 250px;
+    margin-top: 3%;
+    h4 {
+      margin-left: 15%;
+      color: $primary;
+      font-weight: bold;
+      text-align: center;
+    }
+    p {
+      text-align: justify;
+      margin-left: 25%;
+    }
+    img {
+      margin-left: 25%;
+    }
+    button {
+      margin-left: 35%;
+      border: 2px solid $background;
+      background-color: $tertiary;
+    }
+    .btn:hover {
+      background-color: $primary;
+    }
+  }
+  main {
+    h2 {
+      color: $secondary;
+    }
+    h3 {
+      border-bottom: 3px solid $background;
+    }
   }
 }
