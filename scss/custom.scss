@@ -3,14 +3,12 @@ h1,h2,h3,h4 {
 }
 main {
   h2 {
-    
     font-weight: 900 !important;
     font-size: 2.4rem !important;
     font-style: italic;
     margin-left: 5%;  
   }
   h3 {
-   
     font-weight: 900 !important;
     font-size: 2rem !important;
     font-style: italic;
@@ -19,17 +17,13 @@ main {
     border-bottom: 3px solid $text;
   }
 }
-
-
 body {
     background-color: $background;
   }
-
   nav {
     font-family: 'Almendra SC';
     background-color: $primary;
   }
-
   h2,
   h3 {
     font-family: 'Almendra SC';
@@ -40,11 +34,8 @@ body {
     background-color: $secondary;
     color: $background;
   }
-
 .dark {
-   
     background-color: $text;
- 
   nav {
     background-color: $tertiary;
   }
@@ -85,19 +76,12 @@ body {
       color: $background;
       background-color: $tertiary;
     }
-  
   }
-
-
 }
-
-
 #Logo {
   width: 150px !important;
   height: 150px !important;
 }
-
-
 .articles{
   width: 250px;
   margin-top : 3%;
@@ -120,6 +104,9 @@ body {
     color: $tertiary;
     background-color: $primary;
   }
-
+  .titreTronque {
+    overflow:hidden;
+    text-overflow:ellipsis;
+    height: 55px;    
+  }
 }
-
