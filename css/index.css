@@ -23241,11 +23241,39 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+h1, .h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+  font-family: "Almendra SC";
+  color: #070600;
+}
+
+.nav-link {
+  font-family: "Almendra SC";
+  font-size: 1.4rem;
+  color: #070600;
+}
+
+@media (min-width: 992px) {
+  .nav-link {
+    color: #f7f7ff;
+    margin-left: 8rem;
+    margin-right: 8rem;
+    font-size: 1.7rem;
+  }
+}
+
+.btn,
+span {
   font-family: "Almendra SC";
 }
 
 main h2, main .h2 {
+  color: #74b336;
   font-weight: 900 !important;
   font-size: 2.4rem !important;
   font-style: italic;
@@ -23259,27 +23287,56 @@ main h3, main .h3 {
   width: fit-content;
   border-bottom: 3px solid #070600;
 }
+main .btn:hover {
+  background-color: #68abab;
+}
 
 body {
   background-color: #f7f7ff;
 }
 
 nav {
-  font-family: "Almendra SC";
   background-color: #9368b7;
-}
-
-h2, .h2,
-h3,
-.h3 {
-  font-family: "Almendra SC";
-  color: #070600;
 }
 
 li > a:hover {
   transition-duration: 1s;
-  background-color: #74b336;
+  background-color: #68abab;
   color: #f7f7ff;
+}
+
+#Logo {
+  width: 150px !important;
+  height: 150px !important;
+}
+
+.articles {
+  width: 250px;
+  margin-top: 3%;
+}
+.articles h4, .articles .h4 {
+  margin-left: 15%;
+  color: #68abab;
+  font-weight: bold;
+  text-align: center;
+}
+.articles p {
+  text-align: justify;
+  margin-left: 25%;
+}
+.articles img {
+  margin-left: 25%;
+}
+.articles button {
+  margin-left: 35%;
+  border: 2px solid #070600;
+  color: #f7f7ff;
+  background-color: #9368b7;
+}
+.articles .titreTronque {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 55px;
 }
 
 .dark {
@@ -23287,6 +23344,7 @@ li > a:hover {
 }
 .dark nav {
   background-color: #68abab;
+  font-family: "Almendra SC";
 }
 .dark h2, .dark .h2,
 .dark h3,
@@ -23301,7 +23359,8 @@ li > a:hover {
 .dark article > * {
   color: #f7f7ff;
 }
-.dark h4, .dark .h4, .dark p {
+.dark h4, .dark .h4,
+.dark p {
   color: #f7f7ff;
 }
 .dark .articles {
@@ -23310,7 +23369,7 @@ li > a:hover {
 }
 .dark .articles h4, .dark .articles .h4 {
   margin-left: 15%;
-  color: #74b336;
+  color: #9368b7;
   font-weight: bold;
   text-align: center;
 }
@@ -23324,42 +23383,25 @@ li > a:hover {
 .dark .articles button {
   margin-left: 35%;
   border: 2px solid #f7f7ff;
-  color: #f7f7ff;
   background-color: #68abab;
 }
-
-#Logo {
-  width: 150px !important;
-  height: 150px !important;
-}
-
-.articles {
-  width: 250px;
-  margin-top: 3%;
-}
-.articles h4, .articles .h4 {
-  margin-left: 15%;
-  color: #9368b7;
-  font-weight: bold;
-  text-align: center;
-}
-.articles p {
-  text-align: justify;
-  margin-left: 25%;
-}
-.articles img {
-  margin-left: 25%;
-}
-.articles button {
-  margin-left: 35%;
-  border: 2px solid #070600;
-  color: #68abab;
+.dark .articles .btn:hover {
   background-color: #9368b7;
 }
-.articles .titreTronque {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  height: 55px;
+.dark main h2, .dark main .h2 {
+  color: #74b336;
+}
+.dark main h3, .dark main .h3 {
+  border-bottom: 3px solid #f7f7ff;
+}
+
+footer {
+  background-color: #9368b7;
+  text-align: center;
+}
+footer a {
+  color: #f7f7ff;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=index.css.map */
