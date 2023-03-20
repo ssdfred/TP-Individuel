@@ -120,6 +120,11 @@ body {
     color: $tertiary;
     background-color: $primary;
   }
+  .titreTronque {
+    overflow:hidden;
+    text-overflow:ellipsis;
+    height: 55px;    
+  }
 
 }
 
