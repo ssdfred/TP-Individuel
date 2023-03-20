@@ -143,3 +143,13 @@ li > a:hover {
     }
   }
 }
+
+footer {
+  background-color: $primary;  
+  text-align: center;
+  a{
+    color: $background;    
+    text-decoration: none;
+  }  
+}
+

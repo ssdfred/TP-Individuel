@@ -68,7 +68,7 @@ function createHtmlElement(array, parent) {
     <h4 class="titreTronque">${element.title}</h4>
     <p><span class="fw-bold">Date de sortie : </span>${element.dateSortie}</p>    
     <img src="${element.image}" alt="Poster de ${element.title}" width=200px height=350px >    
-    <p  id="description${element.id}"><span class="fw-bold">Lien vers la news : </span><a href="${element.description}">${element.description}</a></p>    
+    <p  id="description${element.id}"><a href="${element.description}">Lien vers la news</a></p>    
   `;
       parent.appendChild(htmlElement);
     });

@@ -23395,4 +23395,13 @@ li > a:hover {
   border-bottom: 3px solid #f7f7ff;
 }
 
+footer {
+  background-color: #9368b7;
+  text-align: center;
+}
+footer a {
+  color: #f7f7ff;
+  text-decoration: none;
+}
+
 /*# sourceMappingURL=index.css.map */
