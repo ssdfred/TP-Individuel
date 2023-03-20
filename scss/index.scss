@@ -1,7 +1,8 @@
 /*l'import de nos variable */
 @import "./variable.scss";
-@import "./custom.scss";
+
 
 /*import des styles bootstrap*/
-//@import "../node_modules/@popperjs/core/dist/umd/popper.min.js.map";
+@import "../node_modules/bootstrap/scss/bootstrap";
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "./custom.scss";

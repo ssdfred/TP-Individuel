@@ -1,55 +1,191 @@
-
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <title>Page films</title>
-</head>
-<body>
-  <header>
-    <h1></h1>
-  </header>
-  <main>
-    <article id="first-band ">
-      <h3 class="h2-first-band ">Tops</h3>
-    </article>
-    <section class="container">
-      <div> 
-        <img src="../../top_111.jpg" alt="Image de la bannière du top">
-        <h3>Le Top 111 des films</h3>
-        <p>Vous chercher les films à voir? Les meilleurs films de tous les temps, tous...</p>
-      </div>
-    </section>
-    <section class="container">
-      <div> 
-        <img src="../../top_100_movie.jpg" alt="Image de la bannière du top">
-        <h3>Vos Top 100 films préférés</h3>
-        <p>À la différence du Top 111 Films, ce Top 100 des Tops 10 n'est pas basé sur la note...</p>
-      </div>
-      
-    </section>
-    <section class="container">
-      <div> 
-        <img src="../../TP-Individuel/assets/images/meilleurfilm2023.jpg" alt="Image de la bannière du top">
-        <h3>Les meilleurs films de 2023</h3>
-        <p>Avec: Babylon, The Fabelmans, Aftersun, TÁR, Knock at the Cabin...</p>
-      </div>
-      
-    </section>
-    <section class="container">
-      <div> 
-        <img src="../../TP-Individuel/assets/images/meilleursfilm2022.jpg" alt="Image de la bannière du top">
-        <h3>Le meilleurs films de 2022</h3>
-        <p>Avec: The Batman, Everything Everywhere All at Once, Licorice Pizza, Nope, Top...</p>
-      </div>
-      
-    </section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../node_modules/bootstrap/js/index.esm.js" />
+    <link rel="stylesheet" href="../css/series.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <title>Document</title>
+  </head>
+    <body class="">
+      <header>
+        <div class="container-fluid" id="hearderLogo">
+          <div class="row justify-content-between border">
+            <img
+              class="col-4"
+              src="../assets/images/logo_sens_critos.png"
+              alt="SensCritos"
+              id="Logo"
+            />
   
-   </main>
-</body>
+            <form class="col-4 h-25 d-flex mt-4" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Recherche"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          
+            <div class="darck col-1 h-25 mt-4">
+              <button class="btn btn-danger" id="mode" type="button">i<i class="fas fa-moon"></i>
+                <span>Thème sombre</span></button>
+            </div>
+          </div>
+        </div>
+        <nav class="navbar navbar-expand-lg">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#navbarOffcanvasLg"
+            aria-controls="navbarOffcanvasLg"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="offcanvas offcanvas-start"
+            tabindex="-1"
+            id="navbarOffcanvasLg"
+            aria-labelledby="navbarOffcanvasLgLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                Navigation
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul
+                class="navbar-nav justify-content-between flex-grow-1 pe-3 mt-4"
+              >
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    aria-current="page"
+                    href="index.html"
+                    aria-label="Actualité"
+                    >Actualité</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="page1.html" aria-label="Films">Films</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="series.html" aria-label="Séries">Séries</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+  
+    <section id="container">
+      <h2 class="text-primary">Films</h2>
+      <h3>Tops</h3>
+      <div class="tops">
+        <div class="top-container">
+          <section>
+            <img src="../assets/images/top_111 (1).webp" alt="bannière du top 111 films" />
+            <h4>Le Top 111 films</h4>
+            <p>
+              Vous cherchez les films à voir ? Les meilleurs films de tous les temps, tous...
+            </p>
+          </section>
+          <section>
+            <img src="../assets/images/top_100_movie.webp" alt="bannière du top 100 films" />
+            <h4>Vos 100 films préférées</h4>
+            <p>
+              à la différence du Top 111 Films ce Top 100 des Tops 10 n'est pas
+              basé sur la ...
+            </p>
+          </section>
+        </div>
+          <div class="top-container">
+            <section>
+            <img src="../assets/images/meilleurfilm2023.jpg" alt="bannière film de 2023" />
+            <h4>Les meilleures Films de 2023</h4>
+            <p>
+              Avec: Babylon, The Fabelmans, Aftersun, TÁR, Knock at the Cabin
+            </p>
+          </section>
+          <section>
+            <img src="../assets/images/meilleursfilm2022.jpg" alt="bannière film de 2022" />
+            <h4>Les meilleures Films de 2022</h4>
+            <p>
+              Avec: The Batman, Everything Everywhere All at Once, Licorice Pizza, Nope, Top...
+            </p>
+          </section>
+        </div>
+        <div class="top-container">
+          <section>
+            <img src="../assets/images/meilleurfilm2021.jpg" alt="bannière film de 2021" />
+            <h4>Les meilleurs Films de 2021</h4>
+            <p>
+              Avec: Jurassic Park, Les Aventuriers de l'arche perdue, Indiana Jones et la...
+            </p>
+          </section>
+          <section>
+            <img src="../assets/images/meilleurfilm2020.jpg" alt="bannière film de 2020" />
+            <h4>Les meilleures Films de 2020</h4>
+            <p>Avec: 1917, Drunk, Jojo Rabbit, Soul, Tenet</p>
+          </section>
+        </div>
+          <div class="top-container">
+            <section>
+            <img src="../assets/images/filmattendu.jpg" alt="bannière film les plus attendus" />
+            <h4>Les Films les plus attendues de 2023</h4>
+            <p>
+              Avec: Dune - Deuxième partie, Oppenheimer, Babylon, Killers of the Flower Moon,...
+            </p>
+            </section>
+          <section>
+            <img src="../assets/images/filmstevenspielberg.jpg" alt="bannière film de Steven Spielberg" />
+            <h4>Les meilleurs films de Steven Spielberg</h4>
+            <p>
+              Avec: Jurassic Park, Les Aventuriers de l'arche perdue, Indiana Jones et la...
+            </p>
+          </section>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <section>
+        <div>
+          <h2>Actulité</h2>
+        </div>
+        <div>
+          <h2>Films</h2>
+        </div>
+        <div>
+          <h2>Séries</h2>
+        </div>
+      </section>
+      <section>
+        <a>Contact</a>
+        <a>A propos</a>
+        <a>Aide</a>
+        <a>CGU</a>
+        <a>Blog</a>
+        <a>Emploi</a>
+      </section>
+      <div>
+        <p>2023 SensCritos</p>
+      </div>
+    </footer>
+    <script src="../js/ModeSombre.js"></script>
+    <script src="../js/index.js" type="module"></script>
+    <script src="../node_modules/@popperjs/core/dist/umd/popper.min.js" type="module"></script>
+  </body>
 </html>
 

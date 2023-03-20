@@ -3,14 +3,14 @@ h1,h2,h3,h4 {
 }
 main {
   h2 {
-    color : $secondary !important;
+    
     font-weight: 900 !important;
     font-size: 2.4rem !important;
     font-style: italic;
     margin-left: 5%;  
   }
   h3 {
-    color : $text;
+   
     font-weight: 900 !important;
     font-size: 2rem !important;
     font-style: italic;
@@ -20,19 +20,90 @@ main {
   }
 }
 
-#logo {
-  height: 20px;
-  width: 15px;
+
+body {
+    background-color: $background;
+  }
+
+  nav {
+    font-family: 'Almendra SC';
+    background-color: $primary;
+  }
+
+  h2,
+  h3 {
+    font-family: 'Almendra SC';
+    color: $text;
+  }
+  li > a:hover {
+    transition-duration: 1s;
+    background-color: $secondary;
+    color: $background;
+  }
+
+.dark {
+   
+    background-color: $text;
+ 
+  nav {
+    background-color: $tertiary;
+  }
+  h2,
+  h3 {
+    color: $background;
+  }
+  li > a:hover {
+    transition-duration: 1s;
+    background-color: $primary;
+    color: $background;
+  }
+  article >* {
+    color: $background;
+  }
+  h4, p {
+    color: $background;
+  }
+  .articles{
+    width: 250px;
+    margin-top : 3%;
+    h4{
+      margin-left: 15%;
+      color: $secondary;
+      font-weight: bold;
+      text-align: center  ;
+    }
+    p {
+    text-align: justify;
+      margin-left: 25%;
+    }
+    img{
+      margin-left: 25%;
+    }
+    button{
+      margin-left: 35%;
+      border : 2px solid $background;
+      color: $background;
+      background-color: $tertiary;
+    }
+  
+  }
+
+
 }
-nav {
-  background-color: $primary;
+
+
+#Logo {
+  width: 150px !important;
+  height: 150px !important;
 }
+
+
 .articles{
   width: 250px;
   margin-top : 3%;
   h4{
     margin-left: 15%;
-    color : $tertiary;
+    color : $primary;
     font-weight: bold;
     text-align: center  ;
   }
@@ -46,7 +117,8 @@ nav {
   button{
     margin-left: 35%;
     border : 2px solid $text;
-    color: $background;
+    color: $tertiary;
+    background-color: $primary;
   }
   .titreTronque {
     overflow:hidden;
@@ -55,3 +127,4 @@ nav {
   }
 
 }
+
