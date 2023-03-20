@@ -7,7 +7,7 @@
     <link href="../node_modules/bootstrap/js/index.esm.js" />
     <link rel="stylesheet" href="../css/index.css" />
     <link rel="stylesheet" href="../css/series.css" />
-    <title>Document</title>
+    <title>Series</title>
   </head>
   <body class="">
     <header>
@@ -19,18 +19,6 @@
             alt="SensCritos"
             id="Logo"
           />
-
-          <form class="col-4 h-25 d-flex mt-4" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Recherche"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
 
           <div class="darck col-1 h-25 mt-4">
             <button class="btn btn-danger" id="mode" type="button">
@@ -80,7 +68,7 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="page1.html" aria-label="Films"
+                <a class="nav-link" href="films.html" aria-label="Films"
                   >Films</a
                 >
               </li>
@@ -117,8 +105,9 @@
               </p>
             </section>
           </div>
-          <div>
-            <section class="top-container">
+
+          <div class="top-container">
+            <section>
               <img src="../assets/images/MeilleurSeries2023.jpg" alt="" />
               <h4>Les meilleures séries de 2023</h4>
               <p>
@@ -135,6 +124,7 @@
               </p>
             </section>
           </div>
+
           <div class="top-container">
             <section>
               <img src="../assets/images/MeilleurAnime.jpg" alt="" />
@@ -152,8 +142,8 @@
               </p>
             </section>
           </div>
-          <div>
-            <section class="top-container">
+          <div class="top-container">
+            <section>
               <img src="../assets/images/Series2023Attendues.jpg" alt="" />
               <h4>Les séries les plus attendues de 2023</h4>
               <p>
@@ -185,23 +175,28 @@
     </main>
 
     <footer>
-      <section>
-        <div>
-          <h2>Actulité</h2>
+      <section class="d-flex justify-content-around">
+        <div class="d-flex flex-column justify-content-between mx-5 my-3">
+          <h2>Actualités</h2>
+          <a href="index.html#filmsLastRelease">Dernières sorties de films</a>
+          <a href="index.html#seriesLastRelease">Dernières sorties de séries</a>
+          <a href="index.html#seriesLastNews">Dernières news</a>
         </div>
-        <div>
+        <div class="d-flex flex-column justify-content-between mx-5 my-3">
           <h2>Films</h2>
+          <a href="films.html#topmovies2022">Top Films 2022</a>
+          <a href="films.html#topmovies2021">Top films 2021</a>
+          <a href="films.html#container">Tops Films</a>
         </div>
-        <div>
+        <div class="d-flex flex-column justify-content-between mx-5 my-3">
           <h2>Séries</h2>
+          <a href="series.html#container">Top Séries</a>
+          <a href="series.html#topseries2022">Top Séries 2022</a>
+          <a href="series.html#topseries2021">Top Séries 2021</a>
         </div>
       </section>
-      <section>
-        <a>Contact</a>
-        <a>A propos</a>
-        <a>Aide</a>
-        <a>CGU</a>
-        <a>Blog</a>
+      <section class="d-flex justify-content-around">
+        <a>Contact</a> <a>A propos</a> <a>Aide</a> <a>CGU</a> <a>Blog</a>
         <a>Emploi</a>
       </section>
       <div>
@@ -210,7 +205,6 @@
     </footer>
     <script src="../js/series.js"></script>
     <script src="../js/ModeSombre.js"></script>
-    <script src="../js/index.js"></script>
 
     <script
       src="../node_modules/@popperjs/core/dist/umd/popper.min.js"
