@@ -24,40 +24,61 @@ function getDataFromBetaseries() {
     .then((response) => response.json())
     .catch((err) => console.error(err));
 }
+function getDataForNews() {
+  const apiKey = "2aa9940755f7";
+  return fetch(`https://api.betaseries.com/news/last?key=${apiKey}&number=20`)
+    .then((response) => response.json())
+    .catch((err) => console.error(err));
+}
 /**
  * fonction qui ajoute les éléments recupéres depuis la fonction précédente au HTML
- * @param {*promise} listLastMovies
- * @param {*elementHTML section} listOfResults
+ * @param {*Array} array
+ * @param {*elementHTML section} parent
  */
 function createHtmlElement(array, parent) {
-  console.log("Liste des films : ", array);
-  array.forEach((element) => {
-    let htmlElement = document.createElement("article");
-    htmlElement.classList.add("articles");
-    htmlElement.innerHTML = `
-    <h4>${element.title}</h4>
+  if (array[0].hasOwnProperty("note")) {
+    array.forEach((element) => {
+      let htmlElement = document.createElement("article");
+      htmlElement.classList.add("articles");
+      htmlElement.innerHTML = `
+    <h4 style="height : 75px">${element.title}</h4>
     <p><span class="fw-bold">Date de sortie : </span>${element.dateSortie}</p>    
     <img src="${element.image}" alt="Poster de ${element.title}" width=200px height=300px >
     <p><span class="fw-bold">Note : </span>${element.note}/10</p>
     <p class="visually-hidden" id="description${element.id}"><span class="fw-bold">Description : </span>${element.description}</p>
-    <button class="btn btn-primary" id="button${element.id}">Voir la description</button>  
+    <button class="btn" id="button${element.id}">Voir la description</button>  
   `;
-    parent.appendChild(htmlElement);
-    const button = document.getElementById("button" + element.id);
-    const description = document.getElementById("description" + element.id);
-    button.onclick = (e) => {
-      description.classList.toggle("visually-hidden");
-      if (button.innerText === "Voir la description") {
-        button.innerText = "Cacher la description";
-      } else {
-        button.innerText = "Voir la description";
-      }
-    };
-  });
+      parent.appendChild(htmlElement);
+      const buttonDescription = document.getElementById("button" + element.id);
+      const description = document.getElementById("description" + element.id);
+      buttonDescription.onclick = (e) => {
+        description.classList.toggle("visually-hidden");
+        if (buttonDescription.innerText === "Voir la description") {
+          buttonDescription.innerText = "Cacher la description";
+        } else {
+          buttonDescription.innerText = "Voir la description";
+        }
+      };
+    });
+  } else {
+    array.forEach((element) => {
+      let htmlElement = document.createElement("article");
+      htmlElement.classList.add("articles");
+      htmlElement.innerHTML = `
+    <h4 class="titreTronque">${element.title}</h4>
+    <p><span class="fw-bold">Date de sortie : </span>${element.dateSortie}</p>    
+    <img src="${element.image}" alt="Poster de ${element.title}" width=200px height=350px >    
+    <p  id="description${element.id}"><span class="fw-bold">Lien vers la news : </span><a href="${element.description}">${element.description}</a></p>    
+  `;
+      parent.appendChild(htmlElement);
+    });
+  }
 }
 // Pour la taille de l'image , mettre une max-width a 57% = 114px
 const listLastFilms = document.getElementById("filmsLastRelease");
 const listLastSeries = document.getElementById("seriesLastRelease");
+const listLastNews = document.getElementById("seriesLastNews");
+
 document.body.onload = async (e) => {
   let listLastMovies = await getDataFromTMDB();
   let movieArray = [];
@@ -87,6 +108,20 @@ document.body.onload = async (e) => {
     seriesArray.push(media);
   });
 
+  let listLastNewsData = await getDataForNews();
+  console.log(listLastNewsData);
+  let newsArray = [];
+  listLastNewsData.news.forEach((element) => {
+    let news = {
+      id: element.id,
+      title: element.title,
+      dateSortie: frenchDate(element.date),
+      image: element.picture_url,
+      description: element.url,
+    };
+    newsArray.push(news);
+  });
+
   if (movieArray.length !== 0) {
     createHtmlElement(movieArray, listLastFilms);
   } else {
@@ -94,6 +129,11 @@ document.body.onload = async (e) => {
   }
   if (seriesArray.length !== 0) {
     createHtmlElement(seriesArray, listLastSeries);
+  } else {
+    console.log("pas de données");
+  }
+  if (newsArray.length !== 0) {
+    createHtmlElement(newsArray, listLastNews);
   } else {
     console.log("pas de données");
   }
