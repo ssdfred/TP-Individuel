@@ -23287,9 +23287,6 @@ main h3, main .h3 {
   width: fit-content;
   border-bottom: 3px solid #070600;
 }
-main .btn:hover {
-  background-color: #68abab;
-}
 
 body {
   background-color: #f7f7ff;
@@ -23308,6 +23305,14 @@ li > a:hover {
 #Logo {
   width: 150px !important;
   height: 150px !important;
+}
+
+.btn {
+  background-color: #9368b7;
+}
+
+.btn:hover {
+  background-color: #68abab;
 }
 
 .articles {
@@ -23339,6 +23344,16 @@ li > a:hover {
   height: 55px;
 }
 
+footer {
+  background-color: #9368b7;
+  text-align: center;
+}
+footer a {
+  color: #f7f7ff;
+  text-decoration: none;
+}
+
+/*passage du mode clair au mode sombre*/
 .dark {
   background-color: #070600;
 }
@@ -23366,6 +23381,9 @@ li > a:hover {
 .dark .articles {
   width: 250px;
   margin-top: 3%;
+  /*.btn:hover {
+    background-color: $primary;
+  }*/
 }
 .dark .articles h4, .dark .articles .h4 {
   margin-left: 15%;
@@ -23385,23 +23403,18 @@ li > a:hover {
   border: 2px solid #f7f7ff;
   background-color: #68abab;
 }
-.dark .articles .btn:hover {
-  background-color: #9368b7;
-}
 .dark main h2, .dark main .h2 {
   color: #74b336;
 }
 .dark main h3, .dark main .h3 {
   border-bottom: 3px solid #f7f7ff;
 }
-
-footer {
-  background-color: #9368b7;
+.dark footer {
+  background-color: #68abab;
   text-align: center;
 }
-footer a {
-  color: #f7f7ff;
-  text-decoration: none;
+.dark .btn:hover {
+  background-color: #9368b7;
 }
 
 /*# sourceMappingURL=index.css.map */
