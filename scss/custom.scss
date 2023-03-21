@@ -39,9 +39,6 @@ main {
     width: fit-content;
     border-bottom: 3px solid $text;
   }
-  .btn:hover {
-    background-color: $tertiary;
-  }
 }
 body {
   background-color: $background;
@@ -58,6 +55,12 @@ li > a:hover {
 #Logo {
   width: 150px !important;
   height: 150px !important;
+}
+.btn {
+  background-color: $primary;
+}
+.btn:hover {
+  background-color: $tertiary;
 }
 .articles {
   width: 250px;
@@ -87,6 +90,15 @@ li > a:hover {
     height: 55px;
   }
 }
+footer {
+  background-color: $primary;  
+  text-align: center;
+  a{
+    color: $background;    
+    text-decoration: none;
+  }  
+}
+/*passage du mode clair au mode sombre*/
 .dark {
   background-color: $text;
   nav {
@@ -130,9 +142,9 @@ li > a:hover {
       border: 2px solid $background;
       background-color: $tertiary;
     }
-    .btn:hover {
+    /*.btn:hover {
       background-color: $primary;
-    }
+    }*/
   }
   main {
     h2 {
@@ -142,14 +154,15 @@ li > a:hover {
       border-bottom: 3px solid $background;
     }
   }
+  footer {
+    background-color: $tertiary;  
+    text-align: center;
+
+  }
+  .btn:hover {
+    background-color: $primary;
+  }
 }
 
-footer {
-  background-color: $primary;  
-  text-align: center;
-  a{
-    color: $background;    
-    text-decoration: none;
-  }  
-}
+
 
