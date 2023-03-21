@@ -1,3 +1,4 @@
+/* Media queries du top containers */
 @media (min-width: 576px) {
   .top-container {
     display: block;
@@ -19,7 +20,7 @@
     justify-content: center;
   }
 }
-
+/* mise en forme du container */
 #container {
   display: block;
   width: 100%;
@@ -27,14 +28,14 @@
   margin-top: 20px;
   padding: 0px 20px;
 }
-
+/* mise en forme des images */
 .top-container img {
   height: auto;
   max-width: 100%;
   border-radius: 3px;
   justify-content: center;
 }
-
+/* misen forme des textes */
 .top-container h4 {
   font-size: 18px;
   margin-top: 10px;
