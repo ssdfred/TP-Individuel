@@ -82,9 +82,11 @@ const createMovies = async (year, parent) => {
 
     }
 }
+const top2023 = document.getElementById("topmovies2023")
 const top2022 = document.getElementById("topmovies2022")
 const top2021 = document.getElementById("topmovies2021")
 
 
+createMovies("2023", top2023)
 createMovies("2022", top2022)
 createMovies("2021", top2021)
