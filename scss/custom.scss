@@ -84,6 +84,11 @@ li > a:hover {
     color: $background;
     background-color: $primary;
   }
+  a{
+    text-decoration: none;
+    cursor: pointer;
+    color : $text;
+  }
   .titreTronque {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -161,8 +166,9 @@ footer {
   }
   .btn:hover {
     background-color: $primary;
-  }
+  }  
 }
+
 
 
 
