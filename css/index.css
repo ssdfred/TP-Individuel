@@ -23376,6 +23376,10 @@ footer a {
   text-decoration: none;
 }
 
+.text-primary {
+  color: #74b336 !important;
+}
+
 /*passage du mode clair au mode sombre*/
 .dark {
   background-color: #070600;

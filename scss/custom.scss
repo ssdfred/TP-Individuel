@@ -120,6 +120,9 @@ footer {
     text-decoration: none;
   }  
 }
+.text-primary {
+  color: $secondary !important;
+}
 
 /*passage du mode clair au mode sombre*/
 .dark {
