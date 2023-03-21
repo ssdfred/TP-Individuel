@@ -10,6 +10,12 @@ h4 {
   font-size: 1.4rem;
   color: $text;
 }
+
+i {
+  @include lg {
+  font-size: 2.5rem;
+}
+}
 .nav-link {
   @include lg {
     color: $background;
@@ -52,16 +58,18 @@ li > a:hover {
   background-color: $tertiary;
   color: $background;
 }
+
 #Logo {
-  width: 150px !important;
-  height: 150px !important;
+  width: 100px !important;
+  height: 100px !important;
 }
-#mode.btn {
-  background-color: $primary;
+#Logo{
+  @include lg {
+    width: 150px !important;
+    height: 150px !important;
+  }
 }
-#mode.btn:hover {
-background-color: $tertiary;
-}
+
 .btn:hover {
   background-color: $tertiary;
 }
@@ -124,6 +132,9 @@ footer {
   p {
     color: $background;
   }
+  i {
+    color: $background;
+  }
   .articles {
     width: 250px;
     margin-top: 3%;
@@ -145,9 +156,7 @@ footer {
       border: 2px solid $background;
       background-color: $tertiary;
     }
-    /*.btn:hover {
-      background-color: $primary;
-    }*/
+
   }
   main {
     h2 {

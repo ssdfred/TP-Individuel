@@ -1,4 +1,4 @@
-let button = document.querySelector('#mode');
+let button = document.querySelector('.icon-moon');
 let span = document.querySelector('span');
 
 if(localStorage.getItem('theme')) {
