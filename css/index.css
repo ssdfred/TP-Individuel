@@ -23258,6 +23258,10 @@ h4,
   color: #070600;
 }
 
+.modes {
+  margin-right: 2rem;
+}
+
 @media (min-width: 992px) {
   i {
     font-size: 2.5rem;
@@ -23309,8 +23313,8 @@ li > a:hover {
 }
 
 #Logo {
-  width: 100px !important;
-  height: 100px !important;
+  width: 3rem !important;
+  height: 3rem !important;
 }
 
 @media (min-width: 992px) {

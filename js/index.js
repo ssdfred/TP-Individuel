@@ -12,29 +12,18 @@ function getDataFromTMDB() {
     .then((response) => response.json())
     .catch((err) => console.error(err));
 }
-/**
- * Fonction pour récuperer les données de series recentes sur betaseries
- * @returns promise
- */
 function getDataFromBetaseries() {
   const apiKey = "2aa9940755f7";
   let currentDate = new Date();
   const year = currentDate.getFullYear();
   const month = currentDate.getMonth() + 1;
-  let dateForFetch = `${year}-01-${month}`;
-  Date.parse(dateForFetch);
-
+  const dateForFetch = `${year}-01-${month}`;
   return fetch(
     `https://api.betaseries.com/shows/list?key=${apiKey}&limit=20&since=${dateForFetch}&order=popularity`
   )
     .then((response) => response.json())
     .catch((err) => console.error(err));
 }
-
-/**
- * Fonction qui recupere les derniers articles de nexs concernant les series
- * @returns promise
- */
 function getDataForNews() {
   const apiKey = "2aa9940755f7";
   return fetch(`https://api.betaseries.com/news/last?key=${apiKey}&number=20`)
@@ -78,20 +67,18 @@ function createHtmlElement(array, parent) {
       htmlElement.innerHTML = `
     <h4 class="titreTronque">${element.title}</h4>
     <p><span class="fw-bold">Date de sortie : </span>${element.dateSortie}</p>    
-    <img src="${element.image}" alt="Poster de ${element.title}" class="img-news" >    
+    <img src="${element.image}" alt="Poster de ${element.title}" width=200px height=350px >    
     <p  id="description${element.id}"><a href="${element.description}">Lien vers la news</a></p>    
   `;
       parent.appendChild(htmlElement);
     });
   }
 }
-
-// les variables correspondant aux sections d'affichage de résultat en html
+// Pour la taille de l'image , mettre une max-width a 57% = 114px
 const listLastFilms = document.getElementById("filmsLastRelease");
 const listLastSeries = document.getElementById("seriesLastRelease");
 const listLastNews = document.getElementById("seriesLastNews");
 
-// Au chargement de la page , on appelle les fonction fetch puis on crée un tableau d'objets avec les résulats du fetch
 document.body.onload = async (e) => {
   let listLastMovies = await getDataFromTMDB();
   let movieArray = [];
@@ -135,7 +122,6 @@ document.body.onload = async (e) => {
     newsArray.push(news);
   });
 
-  // Si les tableaux ne sont pas vide on crée les articles en html a l'aide de la fonction create html element
   if (movieArray.length !== 0) {
     createHtmlElement(movieArray, listLastFilms);
   } else {
