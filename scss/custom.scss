@@ -56,8 +56,11 @@ li > a:hover {
   width: 150px !important;
   height: 150px !important;
 }
-.btn {
+#mode.btn {
   background-color: $primary;
+}
+#mode.btn:hover {
+background-color: $tertiary;
 }
 .btn:hover {
   background-color: $tertiary;
