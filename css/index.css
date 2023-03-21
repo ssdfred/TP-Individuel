@@ -23307,8 +23307,12 @@ li > a:hover {
   height: 150px !important;
 }
 
-.btn {
+#mode.btn {
   background-color: #9368b7;
+}
+
+#mode.btn:hover {
+  background-color: #68abab;
 }
 
 .btn:hover {
