@@ -75,9 +75,9 @@ li > a:hover {
 }
 .articles {
   width: 250px;
-  margin-top: 3%;
+  margin-top: 3%;  
   h4 {
-    margin-left: 15%;
+    margin-left: 15%;    
     color: $tertiary;
     font-weight: bold;
     text-align: center;
@@ -87,18 +87,28 @@ li > a:hover {
     margin-left: 25%;
   }
   img {
-    margin-left: 25%;
+    margin-left: 25%;    
   }
   button {
-    margin-left: 35%;
+    margin-left: 25%;
     border: 2px solid $text;
     color: $background;
     background-color: $primary;
+  }
+  a{
+    text-decoration: none;
+    cursor: pointer;
+    color : $text;
   }
   .titreTronque {
     overflow: hidden;
     text-overflow: ellipsis;
     height: 55px;
+  }
+  .img-news{
+    margin-left:12.5%;
+    width:225px;
+    height:175px;
   }
 }
 footer {
@@ -173,8 +183,9 @@ footer {
   }
   .btn:hover {
     background-color: $primary;
-  }
+  }  
 }
+
 
 
 

@@ -23342,15 +23342,25 @@ li > a:hover {
   margin-left: 25%;
 }
 .articles button {
-  margin-left: 35%;
+  margin-left: 25%;
   border: 2px solid #070600;
   color: #f7f7ff;
   background-color: #9368b7;
+}
+.articles a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #070600;
 }
 .articles .titreTronque {
   overflow: hidden;
   text-overflow: ellipsis;
   height: 55px;
+}
+.articles .img-news {
+  margin-left: 12.5%;
+  width: 225px;
+  height: 175px;
 }
 
 footer {
