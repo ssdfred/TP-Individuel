@@ -10,6 +10,14 @@ h4 {
   font-size: 1.4rem;
   color: $text;
 }
+.modes {
+  margin-right: 2rem;
+}
+i {
+  @include lg {
+  font-size: 2.5rem;
+}
+}
 .nav-link {
   @include lg {
     color: $background;
@@ -39,9 +47,6 @@ main {
     width: fit-content;
     border-bottom: 3px solid $text;
   }
-  .btn:hover {
-    background-color: $tertiary;
-  }
 }
 body {
   background-color: $background;
@@ -56,14 +61,24 @@ li > a:hover {
   color: $background;
 }
 #Logo {
-  width: 150px !important;
-  height: 150px !important;
+  width: 3rem !important;
+  height: 3rem !important;
+}
+#Logo{
+  @include lg {
+    width: 150px !important;
+    height: 150px !important;
+  }
+}
+
+.btn:hover {
+  background-color: $tertiary;
 }
 .articles {
   width: 250px;
-  margin-top: 3%;
+  margin-top: 3%;  
   h4 {
-    margin-left: 15%;
+    margin-left: 15%;    
     color: $tertiary;
     font-weight: bold;
     text-align: center;
@@ -73,20 +88,40 @@ li > a:hover {
     margin-left: 25%;
   }
   img {
-    margin-left: 25%;
+    margin-left: 25%;    
   }
   button {
-    margin-left: 35%;
+    margin-left: 25%;
     border: 2px solid $text;
     color: $background;
     background-color: $primary;
+  }
+  a{
+    text-decoration: none;
+    cursor: pointer;
+    color : $text;
   }
   .titreTronque {
     overflow: hidden;
     text-overflow: ellipsis;
     height: 55px;
   }
+  .img-news{
+    margin-left:12.5%;
+    width:225px;
+    height:175px;
+  }
 }
+footer {
+  background-color: $primary;  
+  text-align: center;
+  a{
+    color: $background;    
+    text-decoration: none;
+  }  
+}
+
+/*passage du mode clair au mode sombre*/
 .dark {
   background-color: $text;
   nav {
@@ -107,6 +142,9 @@ li > a:hover {
   }
   h4,
   p {
+    color: $background;
+  }
+  i {
     color: $background;
   }
   .articles {
@@ -130,9 +168,7 @@ li > a:hover {
       border: 2px solid $background;
       background-color: $tertiary;
     }
-    .btn:hover {
-      background-color: $primary;
-    }
+
   }
   main {
     h2 {
@@ -142,14 +178,16 @@ li > a:hover {
       border-bottom: 3px solid $background;
     }
   }
-}
+  footer {
+    background-color: $tertiary;  
+    text-align: center;
 
-footer {
-  background-color: $primary;  
-  text-align: center;
-  a{
-    color: $background;    
-    text-decoration: none;
+  }
+  .btn:hover {
+    background-color: $primary;
   }  
 }
+
+
+
 

@@ -23258,6 +23258,16 @@ h4,
   color: #070600;
 }
 
+.modes {
+  margin-right: 2rem;
+}
+
+@media (min-width: 992px) {
+  i {
+    font-size: 2.5rem;
+  }
+}
+
 @media (min-width: 992px) {
   .nav-link {
     color: #f7f7ff;
@@ -23287,9 +23297,6 @@ main h3, main .h3 {
   width: fit-content;
   border-bottom: 3px solid #070600;
 }
-main .btn:hover {
-  background-color: #68abab;
-}
 
 body {
   background-color: #f7f7ff;
@@ -23306,8 +23313,19 @@ li > a:hover {
 }
 
 #Logo {
-  width: 150px !important;
-  height: 150px !important;
+  width: 3rem !important;
+  height: 3rem !important;
+}
+
+@media (min-width: 992px) {
+  #Logo {
+    width: 150px !important;
+    height: 150px !important;
+  }
+}
+
+.btn:hover {
+  background-color: #68abab;
 }
 
 .articles {
@@ -23328,17 +23346,37 @@ li > a:hover {
   margin-left: 25%;
 }
 .articles button {
-  margin-left: 35%;
+  margin-left: 25%;
   border: 2px solid #070600;
   color: #f7f7ff;
   background-color: #9368b7;
+}
+.articles a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #070600;
 }
 .articles .titreTronque {
   overflow: hidden;
   text-overflow: ellipsis;
   height: 55px;
 }
+.articles .img-news {
+  margin-left: 12.5%;
+  width: 225px;
+  height: 175px;
+}
 
+footer {
+  background-color: #9368b7;
+  text-align: center;
+}
+footer a {
+  color: #f7f7ff;
+  text-decoration: none;
+}
+
+/*passage du mode clair au mode sombre*/
 .dark {
   background-color: #070600;
 }
@@ -23363,6 +23401,9 @@ li > a:hover {
 .dark p {
   color: #f7f7ff;
 }
+.dark i {
+  color: #f7f7ff;
+}
 .dark .articles {
   width: 250px;
   margin-top: 3%;
@@ -23385,23 +23426,18 @@ li > a:hover {
   border: 2px solid #f7f7ff;
   background-color: #68abab;
 }
-.dark .articles .btn:hover {
-  background-color: #9368b7;
-}
 .dark main h2, .dark main .h2 {
   color: #74b336;
 }
 .dark main h3, .dark main .h3 {
   border-bottom: 3px solid #f7f7ff;
 }
-
-footer {
-  background-color: #9368b7;
+.dark footer {
+  background-color: #68abab;
   text-align: center;
 }
-footer a {
-  color: #f7f7ff;
-  text-decoration: none;
+.dark .btn:hover {
+  background-color: #9368b7;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -1,6 +1,5 @@
 let key = "ce4d0d3aa34d"
-// @param{string} years
-// @param{parent} HTMLElement
+//Attention l'année doit etre déclarée en string
 
 const createSeries = async (year, parent) => {
     try {
@@ -11,20 +10,20 @@ const createSeries = async (year, parent) => {
             const series = await getSeries.json()
             console.log(series)
             console.log(series.shows)
-            let arraySeries = [{ name: "", notes: 0, ratio: 0, image: "", description: "", date: "" }, { name: "", notes: 0, ratio: 0 }, { name: "", notes: 0, ratio: 0 }, { name: "", notes: 0, ratio: 0 }, { name: "", notes: 0, ratio: 0 }, { name: "", notes: 0, ratio: 0 }, { name: "", notes: 0, ratio: 0 }, { name: "", notes: 0, ratio: 0 }, { name: "", notes: 0, ratio: 0 }, { name: "", notes: 0, ratio: 0 }]
-            //tri des data et stockage des objets dans arraySeries
+            let top = [{ name: "", notes: 0, ratio: 0, image: "", description: "", date: "" }, { name: "", notes: 0, ratio: 0 }, { name: "", notes: 0, ratio: 0 }, { name: "", notes: 0, ratio: 0 }, { name: "", notes: 0, ratio: 0 }, { name: "", notes: 0, ratio: 0 }, { name: "", notes: 0, ratio: 0 }, { name: "", notes: 0, ratio: 0 }, { name: "", notes: 0, ratio: 0 }, { name: "", notes: 0, ratio: 0 }]
+
             series.shows.forEach(element => {
                 if (element.seasons !== "0" && element.creation === year) {
                     let i = 0
 
-                    while (i < arraySeries.length) {
-                        if (element.notes.mean > arraySeries[i].ratio) {
-                            arraySeries[i].notes = element.notes.mean
-                            arraySeries[i].title = element.title
-                            arraySeries[i].ratio = element.notes.mean * element.notes.total
-                            arraySeries[i].image = element.images.poster
-                            arraySeries[i].description = element.description
-                            arraySeries[i].date = element.creation
+                    while (i < top.length) {
+                        if (element.notes.mean > top[i].ratio) {
+                            top[i].notes = element.notes.mean
+                            top[i].title = element.title
+                            top[i].ratio = element.notes.mean * element.notes.total
+                            top[i].image = element.images.poster
+                            top[i].description = element.description
+                            top[i].date = element.creation
                             break
                         }
                         i++
@@ -33,8 +32,9 @@ const createSeries = async (year, parent) => {
                 }
 
             });
-            //Création des balises HTML
-            arraySeries.forEach(element => {
+            console.log(top.length)
+            console.log(top)
+            top.forEach(element => {
                 let htmlElement = document.createElement("article");
                 htmlElement.classList.add("articles");
                 htmlElement.innerHTML = ` <h4 style="height : 75px">${element.title}</h4>
