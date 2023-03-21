@@ -6,11 +6,10 @@ const createSeries = async (year, parent) => {
     try {
         // Fetch des séries sur L'API
         const getSeries = await fetch(`https://api.betaseries.com/shows/list?key=${key}&limit=200&order=popularity`)
-        console.log(getSeries)
+
         if (getSeries.ok) {
             const series = await getSeries.json()
-            console.log(series)
-            console.log(series.shows)
+
             let arraySeries = [{ name: "", notes: 0, ratio: 0, image: "", description: "", date: "" }, { name: "", notes: 0, ratio: 0 }, { name: "", notes: 0, ratio: 0 }, { name: "", notes: 0, ratio: 0 }, { name: "", notes: 0, ratio: 0 }, { name: "", notes: 0, ratio: 0 }, { name: "", notes: 0, ratio: 0 }, { name: "", notes: 0, ratio: 0 }, { name: "", notes: 0, ratio: 0 }, { name: "", notes: 0, ratio: 0 }]
             //tri des data et stockage des objets dans arraySeries
             series.shows.forEach(element => {
