@@ -1,55 +1,48 @@
 import { frenchDate } from "./fonctionUtils.js";
 
+// @param{string} years
+// @param{parent} HTMLElement
+
 
 let keys = "ce4d0d3aa34d"
 const createMovies = async (year, parent) => {
     try {
         // Fetch des films sur L'API
         const getMovies = await fetch(`https://api.betaseries.com/movies/list?key=${keys}&limit=100&order=popularity`)
-        console.log(getMovies)
+
         if (getMovies.ok) {
             const movies = await getMovies.json()
-            console.log(movies)
-            console.log(movies.movies)
-            let top = [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
+
+            let arrayMovies = [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
             let i = 0
 
-
+            //tri des data et stockage dans arrayMovies de l'id des films
             movies.movies.forEach(element => {
                 if (element.production_year === year && i < 10) {
 
-                    console.log("coucou")
-                    top[i].title = element.title
-                    top[i].id = Number.parseInt(element.id)
-                    console.log(top)
+                    arrayMovies[i].title = element.title
+                    arrayMovies[i].id = Number.parseInt(element.id)
                     i++
-
-
-
                 }
 
             });
 
 
-            console.log(top)
+            //Fetch des description sur l'api
+            arrayMovies.forEach(async (element) => {
 
-
-            top.forEach(async (element) => {
-                console.log(element)
                 try {
 
                     const getDescription = await fetch(`https://api.betaseries.com/movies/movie?v=2.0&id=${element.id}&key=${keys}`)
-                    console.log(getDescription)
+
                     if (getDescription.ok) {
                         const descriptioned = await getDescription.json()
-                        console.log(descriptioned)
-
 
                         element.notes = descriptioned.movie.notes.mean
                         element.image = descriptioned.movie.poster
                         element.description = descriptioned.movie.synopsis
                         element.date = frenchDate(descriptioned.movie.release_date)
-                        console.log(element)
+
 
 
                         let htmlElement = document.createElement("article");
@@ -72,8 +65,6 @@ const createMovies = async (year, parent) => {
                                 buttonDescription.innerText = "Voir la description";
                             }
 
-
-
                         }
                     }
                     else throw new Error
@@ -82,9 +73,7 @@ const createMovies = async (year, parent) => {
                     console.error("error")
                 }
 
-            })
-
-                ;
+            });
         }
         else throw new Error
     }
